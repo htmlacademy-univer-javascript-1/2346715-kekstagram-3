@@ -14,8 +14,6 @@ function getRandomNumberFromRange(a, b) {
 getRandomNumberFromRange(1, 5);
 
 
-getRandomNumberFromRange(5, 0);
-
 // #2
 // Checks if length of string is not bigger than non-negative max value
 function isStringLengthSuitable(string, maxLength) {
