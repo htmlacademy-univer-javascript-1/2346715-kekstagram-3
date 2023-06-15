@@ -13,6 +13,8 @@ function getRandomNumberFromRange(a, b) {
 // start of two last lines were typed just like in Java
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 
+getRandomNumberFromRange(1, 5);
+
 
 // #2
 // Checks if length of string is not undefined
@@ -23,6 +25,8 @@ function isStringLengthSuitable(string, maxLength) {
   }
 }
 // https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String
+
+isStringLengthSuitable('hi!', 3);
 
 
 function createPhotosArray() {
@@ -38,3 +42,5 @@ function createPhotosArray() {
   }
   return arr;
 }
+
+createPhotosArray();
