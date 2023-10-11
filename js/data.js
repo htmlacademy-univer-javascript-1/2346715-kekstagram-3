@@ -1,17 +1,9 @@
-import {getRandomNumberFromRange} from '.util.js';
+export const photosArray = [];
 
-function getPhotosArray() {
-  const arr = [];
-  for (let i = 1; i <= 25; i++) {
-    arr.push({
-      id: i,
-      url: `photos/${i}.jpg`,
-      description: 'Wonderful photo with a number '.concat(i),
-      likes: getRandomNumberFromRange(15, 200),
-      comments: getRandomNumberFromRange(0, 200)
-    });
-  }
-  return arr;
+export function Photo(id, url, description, likes, comments) {
+  this.id = id;
+  this.url = url;
+  this.description = description;
+  this.likes = likes;
+  this.comments = comments;
 }
-
-getPhotosArray();

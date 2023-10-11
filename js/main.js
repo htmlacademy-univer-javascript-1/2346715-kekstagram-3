@@ -1,3 +1,3 @@
-import './util.js';
-import '.data.js';
+import {getPhotosArray} from './util.js';
 
+getPhotosArray(25);
