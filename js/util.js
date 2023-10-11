@@ -1,26 +1,25 @@
+import {photosArray} from './data.js';
+import {Photo} from './data.js';
 
-// #1
-// Gets random number from range including boundaries using floor rounding:
-function getRandomNumberFromRange(a, b) {
-  if (a < 0 || b < 0) {
-    return -1;
+function getRandomPositiveInt(min, max) {
+  if (min >= 0 && min <= max){
+    return Math.round(Math.random() * (max - min) + min);
   }
-  return Math.floor((b >= a)
-    ? Math.random() * (b + 1 - a) + a
-    : Math.random() * (a + 1 - b) + b);
+  return -1;
 }
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 
-getRandomNumberFromRange(1, 5);
+export function isStringLengthEnough(string, maxLength) {
+  return string.length <= maxLength;
+}
 
-
-// #2
-// Checks if length of string is not bigger than non-negative max value
-function isStringLengthSuitable(string, maxLength) {
-  if (!(string === undefined || string === null || maxLength <= 0)) {
-    return String(string).length <= maxLength;
+export function getPhotosArray(number) {
+  for (let i = 0; i < number; i++) {
+    photosArray[i] = new Photo(
+      i + 1,
+      `photos/${i + 1}.jpg`,
+      `Photo${i + 1}`,
+      getRandomPositiveInt(15, 200),
+      getRandomPositiveInt(0, 200)
+    );
   }
 }
-// https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String
-
-isStringLengthSuitable('hi!', 3);
